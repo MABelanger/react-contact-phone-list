@@ -1,12 +1,18 @@
 import React from 'react';
 
 import Contact from './Contact';
+import ContactForm from './ContactForm';
 
+let id=0;
 const Contacts = ({contacts}) => {
   return(
-    <ul>
-      {contacts.map((contact) => <Contact {...contact} />)}
-    </ul>
+    <div>
+      <button>add contact</button>
+      <ul>
+        {contacts.map((contact) => <Contact {...contact} key={id}/>)}
+      </ul>
+      <ContactForm/>
+    </div>
   );
 }
 
