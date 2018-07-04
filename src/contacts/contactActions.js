@@ -7,14 +7,6 @@ export const addContact = (name, tel) => ({
   tel
 });
 
-export const displayContactForm = (isDisplayContactForm) => ({
-  type: 'DISPLAY_CONTACT_FORM',
-  isDisplayContactForm,
-});
-
-
-
-
 export const saveContact = (name, tel, id) => ({
   type: 'SAVE_CONTACT',
   id,

@@ -1,4 +1,12 @@
-const contacts = (state = [], action) => {
+const initState = [
+  {
+    id: 1,
+    name: 'toto',
+    tel: '514-513-2610'
+  }
+];
+
+const contactsReducer = (state = initState, action) => {
   switch (action.type) {
     case 'ADD_CONTACT':
       return [
@@ -25,4 +33,4 @@ const contacts = (state = [], action) => {
   }
 }
 
-export default contacts;
+export default contactsReducer;
