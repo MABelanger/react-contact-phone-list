@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Contacts from '../containers/Contacts';
+import Contacts from '../contacts/ContactsContainer';
+import ContactForm from '../contactForm/ContactFormComponent';
 
-const App = () => {
+const App = ({visibilityContactForm}) => {
   const contacts = [
     {
       id: 1,
@@ -14,6 +15,7 @@ const App = () => {
     <div className="App">
       <h1>react-contact-phone-list</h1>
       <Contacts />
+      {visibilityContactForm ? <ContactForm/>: null}
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import { addContact, saveContact, deleteContact } from '../actions';
 import AppComponent from './AppComponent';
 
 
@@ -8,9 +7,7 @@ const mapStateToProps = (state, ownProps) => ({
   visibilityContactForm: state.visibilityContactForm
 });
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
-  onAddContact: () => dispatch({type: 'VISIBILITY_CONTACT_FORM', visibility: true})
-})
+const mapDispatchToProps = (dispatch, ownProps) => ({})
 
 export default connect(
   mapStateToProps,

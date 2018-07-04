@@ -1,4 +1,4 @@
-const ContactFormVisibilityReducer = (state = false, action) => {
+const contactFormVisibilityReducer = (state = false, action) => {
   switch (action.type) {
     case 'VISIBILITY_CONTACT_FORM':
       return action.visibility;
@@ -8,4 +8,4 @@ const ContactFormVisibilityReducer = (state = false, action) => {
   }
 };
 
-export default ContactFormVisibilityReducer;
+export default contactFormVisibilityReducer;

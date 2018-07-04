@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import contacts from '../../contacts/contactsReducer';
-import visibilityContactForm from '../../contactForm/visibilityContactFormReducer';
+import contacts from '../contacts/contactsReducer';
+import contactFormVisibility from '../contactForm/contactFormVisibilityReducer';
 
 export default combineReducers({
   contacts,
-  visibilityContactForm
+  contactFormVisibility
 });
