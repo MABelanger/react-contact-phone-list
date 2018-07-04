@@ -5,7 +5,7 @@ const contactFormVisibilityReducer = (state = false, action) => {
       return action.isDisplayContactForm;
 
     default:
-      console.log('default'); return state;
+      return state;
   }
 };
 

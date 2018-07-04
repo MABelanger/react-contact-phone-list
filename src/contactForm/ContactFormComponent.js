@@ -12,4 +12,5 @@ const ContactForm = ({contactFormVisibility}) => {
   return null;
 }
 
+
 export default ContactForm;

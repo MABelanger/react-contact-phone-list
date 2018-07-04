@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Contacts from '../contacts/ContactsContainer';
-import ContactForm from '../contactForm/ContactFormComponent';
+import ContactForm from '../contactForm/ContactFormContainer';
 
 const App = ({onDisplayContactForm}) => {
   return (

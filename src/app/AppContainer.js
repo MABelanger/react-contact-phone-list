@@ -4,7 +4,7 @@ import AppComponent from './AppComponent';
 import { displayContactForm } from './appActions';
 
 const mapStateToProps = (state, ownProps) => ({
-  contacts: state.contacts
+
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
