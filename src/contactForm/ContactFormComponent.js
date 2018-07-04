@@ -1,12 +1,15 @@
 import React from 'react';
 
 // redux name, tel, id
-const ContactForm = () => {
-  return(
-    <div>
-      ContactForm
-    </div>
-  )
+const ContactForm = ({contactFormVisibility}) => {
+  if(contactFormVisibility){
+    return(
+      <div>
+        ContactForm
+      </div>
+    );
+  }
+  return null;
 }
 
 export default ContactForm;
