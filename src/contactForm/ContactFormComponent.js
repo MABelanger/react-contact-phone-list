@@ -1,11 +1,13 @@
 import React from 'react';
+import ContactContainer from '../contact/ContactContainer'
 
-// redux name, tel, id
 const ContactForm = ({contactFormVisibility}) => {
+  console.log('contactFormVisibility', contactFormVisibility);
   if(contactFormVisibility){
-    return(
+    return (
       <div>
-        ContactForm
+        <h1>FORM</h1>
+        <ContactContainer/>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { addContact, saveContact, deleteContact } from './contactActions';
+import { editContact, deleteContact } from './contactActions';
 import Contacts from './components/Contacts';
 
 
@@ -8,7 +8,10 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onDeleteContact: (id) => dispatch({type: 'DELETE_CONTACT', id})
+  onDelete: (id) => {
+    console.log('id', id);
+    dispatch(deleteContact(id))
+  }
 })
 
 export default connect(
