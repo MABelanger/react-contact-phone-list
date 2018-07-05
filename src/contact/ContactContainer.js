@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Contact from './ContactComponent';
 
-import { saveContact, addContact } from './contactActions';
+import { addContact, saveContact, clearContact } from './contactActions';
 
 const mapStateToProps = (state, ownProps) => ({
   contact: state.contact
@@ -9,7 +9,10 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   addContact: (contact) => dispatch(addContact(contact)),
-  saveContact: (contact) => dispatch(saveContact(contact))
+  saveContact: (contact) => {
+    dispatch(saveContact(contact));
+    dispatch(clearContact());
+  }
 })
 
 export default connect(

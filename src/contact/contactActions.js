@@ -13,6 +13,10 @@ export const saveContact = (contact) => ({
   contact
 });
 
+export const clearContact = () => ({
+  type: 'CLEAR_CONTACT'
+});
+
 export const editContact = (contact) => ({
   type: 'EDIT_CONTACT',
   contact

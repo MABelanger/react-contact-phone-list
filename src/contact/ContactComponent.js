@@ -33,10 +33,10 @@ const ContactComponent = ({saveContact, addContact, contact={}}) => {
       inputName.value = '';
       inputTel.value = '';
     }}>
+
       <input ref={
         (node) => {
           inputName = node;
-          console.log('node', node);
           if(inputName && isRegisteredContact(contact)) {
             inputName.value = initName;
           }
@@ -49,6 +49,7 @@ const ContactComponent = ({saveContact, addContact, contact={}}) => {
             inputTel.value = initTel;
           }
       }}/>
+
       <button type="submit">
         Save
       </button>
