@@ -11,6 +11,10 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   onDelete: (id) => {
     console.log('id', id);
     dispatch(deleteContact(id))
+  },
+  onEdit: (id) => {
+    console.log('id', id);
+    dispatch(editContact(id))
   }
 })
 

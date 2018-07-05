@@ -1,7 +1,7 @@
 import React from 'react';
 import Contact from './Contact';
 
-const Contacts = ({contacts, onDelete}) => {
+const Contacts = ({contacts, onDelete, onEdit}) => {
 
   return(
     <div>
@@ -12,9 +12,8 @@ const Contacts = ({contacts, onDelete}) => {
             id={id}
             name={name}
             tel={tel}
-            onDelete={(id)=>{
-              onDelete(id);
-            }}
+            onDelete={onDelete}
+            onEdit={onEdit}
             key={id}
           />
           })

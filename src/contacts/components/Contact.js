@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Contact = ({name, tel, id, onDelete}) => {
+const Contact = ({id, name, tel, onDelete, onEdit}) => {
+
   return(
     <li>
-      {name} : {tel} <button onClick={()=>onDelete(id)}>X</button>
+      <a href='#' onClick={()=>onEdit({id, name, tel})}>
+        {id}: {name} : {tel}
+      </a>
+      <button onClick={()=>onDelete(id)}>X</button>
     </li>
   );
 }

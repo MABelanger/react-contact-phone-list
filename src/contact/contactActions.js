@@ -7,3 +7,13 @@ export const addContact = (newContact) => ({
     id: nextContactId++
   }
 });
+
+export const saveContact = (contact) => ({
+  type: 'SAVE_CONTACT',
+  contact
+});
+
+export const editContact = (contact) => ({
+  type: 'EDIT_CONTACT',
+  contact
+});

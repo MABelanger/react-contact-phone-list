@@ -6,23 +6,18 @@ const initState = [
   }
 ];
 
-const contactsReducer = (state = initState, action) => {
+const contactsReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_CONTACT':
-      const { id, name, tel } = action.contact;
       return [
         ...state,
-        {
-          id,
-          name,
-          tel
-        }
+        action.contact
       ];
 
     case 'SAVE_CONTACT':
       return state.map(contact =>
-        (contact.id !== action.id)
-          ? {...contact, name: action.name, tel: action.tel}
+        (contact.id === action.contact.id)
+          ? {...contact, ...action.contact}
           : contact
       );
 

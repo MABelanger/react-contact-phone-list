@@ -1,6 +1,10 @@
 import React from 'react';
 
-const ContactComponent = ({addContact, contact={}}) => {
+const isRegisteredContact = (contact)=> {
+  return contact && Number.isInteger(contact.id);
+}
+
+const ContactComponent = ({saveContact, addContact, contact={}}) => {
   let inputName;
   let inputTel;
 
@@ -16,9 +20,15 @@ const ContactComponent = ({addContact, contact={}}) => {
 
       const newContact = {
         name : inputName.value,
-        tel : inputTel.value
+        tel : inputTel.value,
+        id: contact.id
       };
-      addContact(newContact);
+
+      if(isRegisteredContact(newContact)) {
+        saveContact(newContact)
+      } else {
+        addContact(newContact);
+      }
 
       inputName.value = '';
       inputTel.value = '';
@@ -26,7 +36,8 @@ const ContactComponent = ({addContact, contact={}}) => {
       <input ref={
         (node) => {
           inputName = node;
-          if(contact.id) {
+          console.log('node', node);
+          if(inputName && isRegisteredContact(contact)) {
             inputName.value = initName;
           }
       }}/>
@@ -34,7 +45,7 @@ const ContactComponent = ({addContact, contact={}}) => {
       <input ref={
         (node) => {
           inputTel = node;
-          if(contact.id) {
+          if(inputTel && isRegisteredContact(contact)) {
             inputTel.value = initTel;
           }
       }}/>
