@@ -8,7 +8,7 @@ import App from '../app/AppContainer';
 const RootComponent = ({ store }) => (
   <Provider store={store}>
     <Router>
-      <Route path='/a' component={App} />
+      <Route path='/:pathParam?' component={App} />
     </Router>
   </Provider>
 );
